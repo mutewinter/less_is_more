@@ -76,6 +76,11 @@ App.CodeView = Ember.View.extend
 
     @set('compiledJavaScript', compiledJavaScript)
 
+    # Must run this in next since there's a change that javaScriptView isn't
+    # defined when this method is run.
+    Ember.run.next =>
+      @set('javaScriptView.code', compiledJavaScript)
+
     compiledJavaScript
 
   # Internal: Clear the error message since we compiled successfully.
@@ -100,6 +105,7 @@ App.CodeView = Ember.View.extend
       @set('highlightedLine', highlightedLine)
 
     @set('lastError', message)
+    @get('logView').clearLog()
 
   # Public: Switch the language of the code shown in the editor.
   #
@@ -130,7 +136,6 @@ App.CodeView = Ember.View.extend
   # Eval the compiled js.
   evalJavaScript: (code) ->
     try
-
       exampleView = @get('exampleView')
 
       if exampleView?
@@ -152,7 +157,13 @@ App.CodeView = Ember.View.extend
       argumentNames = exportedVariables.concat(exportedFunctions)
       valuesAndFunctions = variableValues.concat(boundFunctions)
 
+      # Always add the logView
+      logView = @get('logView')
+      argumentNames.pushObject 'log'
+      valuesAndFunctions.pushObject logView.get('log').bind(logView)
+
       exampleView?.willRunCode()
+      logView.willRunCode()
 
       if App.get('config.safeMode')
         fn = (new Function(argumentNames...,'window', "#{code}"))
@@ -168,6 +179,7 @@ App.CodeView = Ember.View.extend
       @displayError(error.message)
     finally
       exampleView?.didRunCode()
+      logView.didRunCode()
 
   observeLanguage: (->
     @changeEditorMode(@get('language'))

@@ -24,15 +24,13 @@ App.CodeAndExampleView = Ember.ContainerView.extend
         noToolbar: @get('noToolbar')
       ), 'codeEditorView')
 
-      return unless @get('exampleViewClassName')
+      @addAndSaveView(App.JavaScriptView.create(
+        height: @get('height')
+      ), 'javaScriptView')
+      @set('codeEditorView.codeView.javaScriptView', @get('javaScriptView'))
 
-      exampleViewClass = Ember.get(@get('exampleViewClassName'))
-      @addAndSaveView(exampleViewClass.create(
-        isExpanded: @get('isExpanded')
-      ), 'exampleView')
-
-      # Set the example view in the code
-      @set('codeEditorView.codeView.exampleView', @get('exampleView'))
+      @addAndSaveView(App.LogView.create(), 'logView')
+      @set('codeEditorView.codeView.logView', @get('logView'))
 
   # Internal: Push the view on the childViews stack and save it locally with
   # the given name.

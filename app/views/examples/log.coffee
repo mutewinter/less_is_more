@@ -1,12 +1,10 @@
 require('views/examples/example')
 
-# Public: The squid view, with some computed properties
+# Public: A log view that appends log messages with the exposed log function.
 App.LogView = App.ExampleView.extend
   classNames: 'log'
-  classNameBindings: 'isExpanded:expanded'
   exportedFunctions: 'log'.w()
   templateName: 'templates/examples/log'
-  isExpanded: false
 
   init: ->
     @_super()
@@ -73,8 +71,3 @@ App.LogView = App.ExampleView.extend
       "#{lineNumber}> #{message}"
     ).join('\n')
   ).property('logMessages.@each')
-
-  # ------------
-  # User Actions
-  # ------------
-  expand: -> @toggleProperty('isExpanded')
