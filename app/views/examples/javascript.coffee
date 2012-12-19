@@ -2,7 +2,7 @@ require('views/examples/example')
 
 # Public: A view
 App.JavaScriptView = App.ExampleView.extend
-  classNames: 'javascript-output'
+  classNames: 'javascript-output code-view javascript'
 
   # Defaults
   height: 300
