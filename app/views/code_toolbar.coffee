@@ -7,12 +7,6 @@ App.CodeToolbarView = Ember.View.extend
   # User Actions
   # ------------
 
-  # Public: Switch the language of the cooresponding code view.
-  #
-  # Returns nothing.
-  switchLanguage: ->
-    @get('codeView').switchLanguage()
-
   resetCode: ->
     @get('codeView').resetCode()
 

@@ -107,19 +107,6 @@ App.CodeView = Ember.View.extend
     @set('lastError', message)
     @get('logView').clearLog()
 
-  # Public: Switch the language of the code shown in the editor.
-  #
-  # Returns nothing.
-  switchLanguage: ->
-    if @get('isJavaScript')
-      @setCode(@get('coffeeScriptCode'))
-      @set('language', 'coffeescript')
-    else if @get('isCoffeeScript')
-      javaScriptCode = @compileJavaScript()
-      if javaScriptCode? and !@get('hasError')
-        @set('language', 'javascript')
-        @setCode(javaScriptCode)
-
   # Public: Resets the code example back to what it was when the slide first
   # loaded.
   resetCode: ->
