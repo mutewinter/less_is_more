@@ -17,23 +17,11 @@ App.JavaScriptView = App.ExampleView.extend
     codeMirrorOptions =
       lineNumbers: true
       mode: 'javascript'
+      readOnly: true
       value: code
       onKeyEvent: (editor, rawEvent) =>
         # Keep this event from triggering a slide change.
         jQuery.Event(rawEvent).stopPropagation()
-      onChange: =>
-        if @get('isCoffeeScript')
-          @runCode()
-
-          if @code() != @get('starterCode')
-            @set('isCodeModified', true)
-          else
-            @set('isCodeModified', false)
-      onFocus: => @set('isFocused', true)
-      onBlur: => @set('isFocused', false)
-      extraKeys:
-        Tab: (cm) -> cm.replaceSelection("  ", "end")
-
 
     editor = CodeMirror((element) =>
       @$().append(element)
