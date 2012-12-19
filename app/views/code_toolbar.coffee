@@ -46,15 +46,6 @@ App.CodeToolbarView = Ember.View.extend
       '&nbsp;'
   ).property('codeView.lastError')
 
-  switchText: (->
-    if @get('hasError')
-      'Fix Error'
-    else if @get('codeView.isCoffeeScript')
-      'View JavaScript'
-    else
-      'Edit CoffeeScript'
-  ).property('codeView.language', 'hasError')
-
   # Public: Can only reset code in coffeescript mode when the code is changed.
   canResetCode: (->
     @get('isCodeModified') and @get('isCoffeeScript')

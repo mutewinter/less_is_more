@@ -7,13 +7,9 @@
 </div>
 <div class="buttons">
   {{#if view.canResetCode}}
-  <a {{action resetCode target="view"}} href="#">
-    Reset Sample
-  </a>
+    <a {{action resetCode target="view"}} href="#">
+      Reset Sample
+    </a>
   {{/if}}
-  {{#unless view.hasError}}
-  <a {{action switchLanguage target="view"}} href="#">
-    {{view.switchText}}
-  </a>
-  {{/unless}}
 </div>
+&nbsp;
