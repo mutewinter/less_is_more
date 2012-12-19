@@ -4,6 +4,7 @@ App.Slide.reopenClass
   slideOrder: [
     { templateName: 'what_is_coffeescript', title: 'What is CoffeeScript?' }
     { templateName: 'follow_along', title: 'Follow Along' }
+    { templateName: 'code_samples', title: 'Code Samples' }
     { templateName: 'annoyance_is_optional', title: 'Annoyance is Optional' }
     { templateName: 'functions', title: 'Functions' }
     { templateName: 'loops', title: 'Loops' }
