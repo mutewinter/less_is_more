@@ -1,0 +1,22 @@
+<div class="banner">
+  <h1>Less is More with CoffeeScript</h1>
+  <div class="subtitle">
+    Less code means less debugging, testing, and maintainence. CoffeeScript's
+    terse syntax allows for maximum productivity whilst encouraging good
+    JavaScript coding practices.
+  </div>
+</div>
+<div class="instructions">
+  <a {{action goToSlide App.firstSlide href=true}}>Start Here</a> or Click a Slide Below
+</div>
+{{#collection class="slide-list" contentBinding="content" tagName="ul" itemTagName="li"}}
+  {{#with view.content as content}}
+    <div {{action goToSlide content}}
+      {{bindAttr class=":slide-container :preview content.isLastShownSlide:flash"}}>
+      {{view App.SlideView contentBinding="content" preview=true}}
+    </div>
+    <span class="slide-number">
+      {{content.slideNumber}} / {{App.slides.length}}
+    </span>
+  {{/with}}
+{{/collection}}
