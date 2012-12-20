@@ -51,4 +51,7 @@ App.JavaScriptView = App.ExampleView.extend
     @setCode @get('code')
   ).observes('code')
 
-  setCode: (code) -> @get('editor')?.setValue($.trim code)
+  setCode: (code) -> @get('editor')?.setValue(
+    $.trim(code)
+    .replace(/(\n\n\n)/gm, '\n') # Remove double empty newlines
+  )
