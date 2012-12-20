@@ -1,5 +1,5 @@
 {{#code}}
-# Traverse Deep Objects with Confidence
+'Traverse Deep Objects with Confidence'
 nested =
   one:
     two:
@@ -9,14 +9,14 @@ nested =
 log nested.one.two.three.four
 log nested.one.derp?.three.four
 
-# Conditional Assignemnt
+'Conditional Assignemnt'
 x = null
 x ?= 'I used to be null'
 log x
 x ?= "This doesn't apply to me"
 log x
 
-# Even with Functions
+'Even with Functions'
 getCarMake = (model) ->
   switch model
     when 'G35' then 'Infiniti'
