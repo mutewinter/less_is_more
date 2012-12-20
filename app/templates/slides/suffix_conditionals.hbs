@@ -1,8 +1,11 @@
+<h2 class="text-center">
+  Read code from left to right.
+</h2>
 {{#code}}
-pants = false
+wearingPants = false
 dirty = true
 haveMeatballSub = true
-thursday = true
+itsThursday = true
 drunk = false
 
 stayInside = -> log "Pants take a lot of work."
@@ -15,13 +18,13 @@ getMaDrinkOn = ->
   drunk = true
 hitOnNeighbor = -> log "I bet she's bored too."
 
-stayInside() if not pants
+stayInside() if not wearingPants
 
 goOutside() unless haveMeatballSub
 
-takeBath() if not pants and haveMeatballSub
+takeBath() if not wearingPants and haveMeatballSub
 
-getMaDrinkOn() if thursday
+getMaDrinkOn() if itsThursday
 
-hitOnNeighbor() if not pants and drunk
+hitOnNeighbor() if not wearingPants and drunk
 {{/code}}

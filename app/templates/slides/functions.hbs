@@ -1,12 +1,15 @@
+<h2 class="text-center">
+  Write sentences instead of syntax.
+</h2>
 {{#code}}
+'Functions without arguments'
+ourHero = -> 'Mr. Bond'
 
-hello = ->
-  log 'Hello'
+'Function with arguments'
+greet = (person) -> "Hello #{person}"
 
-hello()
+'Single line functions'
+evilGreeting = (enemy) -> "#{greet enemy}, time to die."
 
-helloPerson = (person) ->
-  hello() + person
-
-helloPerson 'Mr. Bond'
+log evilGreeting ourHero()
 {{/code}}

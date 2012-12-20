@@ -1,3 +1,6 @@
+<h2 class="text-center">
+  No more counter-based loops.
+</h2>
 {{#code}}
 'Loop over arrays'
 gardenHoses = ['Shiny Green', 'Matte Black', 'Flakey Pink']
@@ -5,7 +8,7 @@ gardenHoses = ['Shiny Green', 'Matte Black', 'Flakey Pink']
 for hose in gardenHoses
   log 'The Best' if hose is 'Shiny Green'
 
-
+'Loop over objects'
 pcManufacturers = {
   dell: 'Below Average'
   hp: 'Below Average'
@@ -13,12 +16,11 @@ pcManufacturers = {
   alienWare: 'Below Average'
 }
 
-'Loop over objects'
 for key, value of pcManufacturers
   log "#{key} is #{value}"
 
-'Assignment'
-x = for key, value of pcManufacturers 
+'Implicit return'
+x = for key, value of pcManufacturers
   key
 
 log "#{x.join(', ')} make computers"

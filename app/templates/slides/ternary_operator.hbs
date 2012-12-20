@@ -1,6 +1,17 @@
+<h2 class="text-center">
+  Readable enough to use.
+</h2>
 {{#code}}
 hasFourteenCats = true
-log if hasFourteenCats then 'Breaking the Law' else 'Not as Happy'
+happy = 'Breaking the Law'
+notHappy = 'Not Happy'
 
-log if [0..5].length > 5 then 'Inclusive Array' else 'Nope'
+log if hasFourteenCats then happy else notHappy
+
+inclusive = 'Inclusive Array'
+log if [0..5].length > 5 then inclusive else 'Nope'
 {{/code}}
+
+{{#view App.NotesView}}
+  I'm using variables for the responses above to make the lines shorter.
+{{/view}}

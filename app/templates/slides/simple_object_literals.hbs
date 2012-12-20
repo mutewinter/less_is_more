@@ -1,10 +1,15 @@
+<h2 class="text-center">
+  Much easier to read and update
+</h2>
 {{#code}}
+'Simple'
 wow =
   so: 'you'
   can: 'just'
   type: 'stuff'
 
 
+'Nest as deep as you like'
 evenBetter =
   works: 'with'
   reserved: 'words'
@@ -16,9 +21,24 @@ evenBetter =
     arrays: [
       'holy'
       'moley'
-      {what: 'the hell', another: 'object'}
     ]
 
-# Yes, that's an array with multiple data types.
+'Easy object arrays'
+array1 = [
+  {first: 'object', withAKey: 'key'}
+  {second: 'object', withAKey: 'key'}
+  {third: 'object', withAKey: 'key'}
+]
 
+'or'
+
+array2 = [
+  first: 'object', withAKey: 'key'
+,
+  second: 'object', withAKey: 'key'
+,
+  third: 'object', withAKey: 'key'
+]
+
+log _.isEqual array1, array2
 {{/code}}

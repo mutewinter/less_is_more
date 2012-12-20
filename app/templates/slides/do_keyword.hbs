@@ -1,9 +1,14 @@
+<h2 class="text-center">
+  Closures are hard, make them easy.
+</h2>
 {{#code}}
+'Failing at closures'
 functions = for number in [1...4] 
   -> number
 
 log f() for f in functions
 
+'Winning at closures'
 closedFunctions = for number in [1...4] 
   do (number) -> 
     -> number

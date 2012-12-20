@@ -1,0 +1,15 @@
+<h2 class="text-center">
+  Never leak into the global namespace again.
+</h2>
+{{#code}}
+betterName = (n) ->
+  name = n.toUpperCase()
+  "#{name} is AWESOME"
+
+log betterName 'Duckman'
+log name
+
+name = 'Dr. Fantastic'
+
+log name
+{{/code}}

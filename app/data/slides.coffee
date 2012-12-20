@@ -11,15 +11,14 @@ App.Slide.reopenClass
     { templateName: 'string_enhancements', title: 'String Enhancements' }
     { templateName: 'simple_object_literals', title: 'Simple Object Literals' }
     { templateName: 'functions', title: 'Functions' }
+    { templateName: 'implicit_return', title: 'Implicit Return' }
     { templateName: 'ranges', title: 'Ranges' }
     { templateName: 'suffix_conditionals', title: 'Suffix Conditionals' }
     { templateName: 'loops', title: 'Loops' }
     { templateName: 'bound_functions', title: 'Bound Functions' }
     { templateName: 'switch_statement', title: 'Switch Statement' }
-    { templateName: 'implicit_return', title: 'Implicit Return' }
     { templateName: 'existential_operator', title: 'Existential Operator' }
     { templateName: 'variable_scoping', title: 'Variable Scoping' }
-    { templateName: 'advanced_stuff', title: 'Advanced Stuff' }
     { templateName: 'ternary_operator', title: 'Ternary Operator' }
     { templateName: 'do_keyword', title: 'Do Keyword' }
     { templateName: 'class_syntax', title: 'Class Syntax' }

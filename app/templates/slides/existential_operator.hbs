@@ -1,3 +1,6 @@
+<h2 class="text-center">
+  Multiple lines of logic in a single character.
+</h2>
 {{#code}}
 'Traverse Deep Objects with Confidence'
 nested =
@@ -6,8 +9,9 @@ nested =
       three:
         four: 'Deep Down'
 
-log nested.one.two.three.four
-log nested.one.derp?.three.four
+log nested.one.derp?.three.four # Look ma, no errors
+# Uncomment this for a specatular error
+# log `nested.one.derp.three.four`
 
 'Conditional Assignemnt'
 x = null

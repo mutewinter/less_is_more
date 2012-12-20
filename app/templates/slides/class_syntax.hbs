@@ -1,2 +1,26 @@
+<h2 class="text-center">
+  You'll actually use them!
+</h2>
 {{#code}}
+class Keyboard
+  audience: 'newbies'
+  goodFor: ->
+    switch @audience
+      when 'newbies' then 'Everyone'
+      when 'prosumers' then 'Professionals'
+      when 'robots' then 'Cyborgs'
+
+class DasKeyboard extends Keyboard
+  audience: 'prosumers'
+
+class KensisKeyboard extends Keyboard
+  audience: 'robots'
+
+class TouchCover extends Keyboard
+  goodFor: -> 'Microsoft'
+
+log new Keyboard().goodFor()
+log new DasKeyboard().goodFor()
+log new KensisKeyboard().goodFor()
+log new TouchCover().goodFor()
 {{/code}}
