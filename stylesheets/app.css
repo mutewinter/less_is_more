@@ -686,9 +686,6 @@ a:visited:hover {
 .code-and-status-bar.focused .CodeMirror {
   border-color: #000;
 }
-.code-and-status-bar.focused.coffeescript .code-view:after {
-  display: none;
-}
 .code-and-status-bar.focused:not(.coffeescript) .CodeMirror {
   border-color: #ccc;
 }

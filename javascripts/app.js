@@ -903,7 +903,7 @@ helpers = helpers || Ember.Handlebars.helpers;
   var foundHelper, self=this;
 
 
-  data.buffer.push("<h2 class=\"text-center\">\n  Go look at the <a href=http://mutewinter.github.com/less_is_more\"\">code on\n    GitHub</a> for this presentation.\n</h2>\n<h2>\n  Special thanks to:\n</h2>\n<ul>\n  <li><a href=\"http://en.wikipedia.org/wiki/Jeremy_Ashkenas\">Jeremy Ashkenas\n    </a> for making CoffeeScript</li>\n  <li><a href=\"http://codemirror.net/\">CodeMirror</a> for making the code editing\n    and possible\n  </li>\n  <li>The <a href=\"http://emberjs.com/\">Ember.js</a> team for making building\n    this presentation effortless\n  </li>\n</ul>\n");
+  data.buffer.push("<h2 class=\"text-center\">\n  Go look at the <a href=\"http://github.com/mutewinter/less_is_more\">code on\n    GitHub</a> for this presentation.\n</h2>\n<h2>\n  Special thanks to:\n</h2>\n<ul>\n  <li><a href=\"http://en.wikipedia.org/wiki/Jeremy_Ashkenas\">Jeremy Ashkenas\n    </a> for making CoffeeScript</li>\n  <li><a href=\"http://codemirror.net/\">CodeMirror</a> for making the code editing\n    and possible\n  </li>\n  <li>The <a href=\"http://emberjs.com/\">Ember.js</a> team for making building\n    this presentation effortless\n  </li>\n</ul>\n<h2>\n  You might also like <a href=\"http://mutewinter.github.com/why_ember\">Why\n    Ember?</a>, a presentation I made about Ember.js</a>\n</h2>\n");
 });
  module.exports = module.id;
 }});
