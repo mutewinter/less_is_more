@@ -24,19 +24,19 @@ App.CodeView = Ember.View.extend
 
     codeMirrorOptions =
       lineNumbers: true
-      mode: @get('language')
+      lineWrapping: true
+      language: 'coffeescript'
       value: code
       onKeyEvent: (editor, rawEvent) =>
         # Keep this event from triggering a slide change.
         jQuery.Event(rawEvent).stopPropagation()
       onChange: =>
-        if @get('isCoffeeScript')
-          @runCode()
+        @runCode()
 
-          if @code() != @get('starterCode')
-            @set('isCodeModified', true)
-          else
-            @set('isCodeModified', false)
+        if @code() != @get('starterCode')
+          @set('isCodeModified', true)
+        else
+          @set('isCodeModified', false)
       onFocus: => @set('isFocused', true)
       onBlur: => @set('isFocused', false)
       extraKeys:
@@ -47,7 +47,6 @@ App.CodeView = Ember.View.extend
       @$().append(element)
     , codeMirrorOptions)
     @set('editor', editor)
-    @changeEditorMode(@get('language'))
 
     if @get('height')?
       @setEditorHeight(@get('height'))
@@ -117,7 +116,6 @@ App.CodeView = Ember.View.extend
   # ---------------
 
   runCode: (code) ->
-    return unless @get('isCoffeeScript')
     @evalJavaScript(@compileJavaScript())
 
   # Eval the compiled js.
@@ -168,19 +166,6 @@ App.CodeView = Ember.View.extend
       exampleView?.didRunCode()
       logView.didRunCode()
 
-  observeLanguage: (->
-    @changeEditorMode(@get('language'))
-  ).observes('language')
-
-  changeEditorMode: (language) ->
-    editor = @get('editor')
-    editor.setOption('mode', language)
-
-    if language is 'coffeescript'
-      editor.setOption('readOnly', false)
-    else
-      editor.setOption('readOnly', true)
-
   # -------
   # Helpers
   # -------
@@ -210,14 +195,6 @@ App.CodeView = Ember.View.extend
 
   exportedVariablesBinding: 'exampleView.exportedVariables'
   exportedFunctionsBinding: 'exampleView.exportedFunctions'
-
-  isJavaScript: (->
-    @get('language') == 'javascript'
-  ).property('language')
-
-  isCoffeeScript: (->
-    @get('language') == 'coffeescript'
-  ).property('language')
 
   # Public: We are in the error state if we haven't cleared the last error.
   hasError: (->

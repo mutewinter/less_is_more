@@ -1,0 +1,26 @@
+{{#code}}
+# Loop over arrays
+
+gardenHoses = ['Shiny Green', 'Matte Black', 'Flakey Pink']
+
+for hose in gardenHoses
+  log 'The Best' if hose is 'Shiny Green'
+
+
+pcManufacturers = {
+  dell: 'Below Average'
+  hp: 'Below Average'
+  lenovo: 'Below Average'
+  alienWare: 'Below Average'
+}
+
+# Loop over objects
+for key, value of pcManufacturers
+  log "#{key} is #{value}"
+
+# Assignment
+x = for key, value of pcManufacturers 
+  key
+
+log "#{x.join(', ')} make computers"
+{{/code}}

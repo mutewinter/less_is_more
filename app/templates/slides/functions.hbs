@@ -1,9 +1,12 @@
-{{#code height="300px" isExpanded=true}}
-says = ->
+{{#code}}
+
+hello = ->
   log 'Hello'
 
-mrBean = ->
-  says 'Hello'
+hello()
 
-mrBean()
+helloPerson = (person) ->
+  hello() + person
+
+helloPerson 'Mr. Bond'
 {{/code}}

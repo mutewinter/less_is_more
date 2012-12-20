@@ -1,0 +1,28 @@
+{{#code}}
+# Traverse Deep Objects with Confidence
+nested =
+  one:
+    two:
+      three:
+        four: 'Deep Down'
+
+log nested.one.two.three.four
+log nested.one.derp?.three.four
+
+# Conditional Assignemnt
+x = null
+x ?= 'I used to be null'
+log x
+x ?= "This doesn't apply to me"
+log x
+
+# Even with Functions
+getCarMake = (model) ->
+  switch model
+    when 'G35' then 'Infiniti'
+    when 'Accord' then 'Honda'
+    when '370z' then 'Nissan'
+
+log getCarMake('Vespa')?.toUpperCase()
+log getCarMake('Accord')?.toUpperCase()
+{{/code}}

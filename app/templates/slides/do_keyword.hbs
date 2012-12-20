@@ -1,0 +1,12 @@
+{{#code}}
+functions = for number in [1...4] 
+  -> number
+
+log f() for f in functions
+
+closedFunctions = for number in [1...4] 
+  do (number) -> 
+    -> number
+
+log f() for f in closedFunctions
+{{/code}}

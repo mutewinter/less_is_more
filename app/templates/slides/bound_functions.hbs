@@ -1,0 +1,15 @@
+{{#code}}
+$('.slide h1').off('click')
+
+class ClickMaster5000
+  message: 'You clicked the crap out of that title.'
+
+  constructor: ->
+    $('.slide h1').on 'click', ->
+      if @message
+        log @message 
+      else
+        log 'Uh oh, try changing that arrow to a fat arrow => for the click handler'
+
+new ClickMaster5000
+{{/code}}

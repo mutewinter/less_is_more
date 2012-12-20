@@ -1,0 +1,14 @@
+{{#code}}
+movies = [
+  {title: 'Looper', year: 2012}
+  {title: 'Cloud Atlas', year: 2012}
+  {title: 'Skyfall', year: 2012}
+  {title: 'Lost in Translation', year: 2003}
+]
+
+log _.chain(movies)
+  .filter((movie) -> movie.year is 2012)
+  .map((movie) -> "#{movie.title} (#{movie.year})")
+  .value()
+
+{{/code}}

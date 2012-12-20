@@ -1,0 +1,27 @@
+{{#code}}
+pants = false
+dirty = true
+haveMeatballSub = true
+thursday = true
+drunk = false
+
+stayInside = -> log "Pants take a lot of work."
+goOutside = -> log "I finally put on pants, thank god."
+takeBath = ->
+  log "The mess will just wash down the drain."
+  dirty = false
+getMaDrinkOn = ->
+  log "Holy crap, it's THURSDAY"
+  drunk = true
+hitOnNeighbor = -> log "I bet she's bored too."
+
+stayInside() if not pants
+
+goOutside() unless haveMeatballSub
+
+takeBath() if not pants and haveMeatballSub
+
+getMaDrinkOn() if thursday
+
+hitOnNeighbor() if not pants and drunk
+{{/code}}

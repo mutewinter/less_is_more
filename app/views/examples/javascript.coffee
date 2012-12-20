@@ -16,6 +16,7 @@ App.JavaScriptView = App.ExampleView.extend
 
     codeMirrorOptions =
       lineNumbers: true
+      lineWrapping: true
       mode: 'javascript'
       readOnly: true
       value: code
