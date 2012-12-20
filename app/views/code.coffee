@@ -24,7 +24,7 @@ App.CodeView = Ember.View.extend
 
     codeMirrorOptions =
       lineNumbers: true
-      lineWrapping: true
+      lineWrapping: false
       language: 'coffeescript'
       value: code
       onKeyEvent: (editor, rawEvent) =>
