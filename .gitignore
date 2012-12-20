@@ -27,6 +27,6 @@ tmp/
 
 public/
 /assets/
-stylesheets/
-javascripts/
-img/
+/stylesheets/
+/javascripts/
+/img/
