@@ -1,8 +1,9 @@
 @import 'nib'
 @import 'colors_and_fonts'
 
-slide-width = 768px
+slide-width = 968px
 slide-margin = 4px
+preview-width = 768px
 preview-height = 200px
 
 /*
@@ -188,7 +189,7 @@ ul.slide-list
 */
 
 .slide-container
-  min-width slide-width - slide-margin
+  min-width preview-width - slide-margin
   background-color rgba(slide-background-color, 0.5)
   margin 3px slide-margin 8px slide-margin
   border-radius 0 0 5px 5px
@@ -197,6 +198,7 @@ ul.slide-list
              0 slide-margin+1 4px black
 
   &.preview
+
     // Overlay to keep the user from interacting with the thumbnails.
     &:before
       content ''
@@ -231,7 +233,7 @@ ul.slide-list
 
     // Override the dynamic slide width for the preview.
     .slide
-      width 100%
+      width preview-width
 
 @keyframes flash
   0%
@@ -275,4 +277,4 @@ second-offset = 10px
 
 .slide-number
   float right
-  margin-right -20px
+  margin-right 40px
