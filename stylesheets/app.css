@@ -569,9 +569,8 @@ h2 {
   margin-bottom: 10px;
 }
 .banner {
-  background-color: rgba(250,206,162,0.5);
-  width: 70%;
-  max-width: 500px;
+  background-color: rgba(177,135,80,0.4);
+  max-width: 700px;
   margin: 30px auto 10px auto;
   padding: 30px;
   overflow: hidden;
