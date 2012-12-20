@@ -20,12 +20,12 @@ App.CodeAndExampleView = Ember.ContainerView.extend
       @addAndSaveView(App.CodeEditorAndStatusBarView.create(
         template: @get('template')
         language: @get('language')
-        height: @get('height')
+        height: @getWithDefault('height', 400)
         noToolbar: @get('noToolbar')
       ), 'codeEditorView')
 
       @addAndSaveView(App.JavaScriptView.create(
-        height: @get('height')
+        height: @getWithDefault('height', 400)
       ), 'javaScriptView')
       @set('codeEditorView.codeView.javaScriptView', @get('javaScriptView'))
 
