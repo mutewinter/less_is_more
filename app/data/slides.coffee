@@ -3,6 +3,7 @@
 App.Slide.reopenClass
   slideOrder: [
     { templateName: 'what_is_coffeescript', title: 'What is CoffeeScript?' }
+    { templateName: 'by_the_numbers', title: 'By the Numbers' }
     { templateName: 'follow_along', title: 'Follow Along' }
     { templateName: 'code_samples', title: 'Code Samples' }
     { templateName: 'annoyance_is_optional', title: 'Annoyance is Optional' }
@@ -23,5 +24,5 @@ App.Slide.reopenClass
     { templateName: 'do_keyword', title: 'Do Keyword' }
     { templateName: 'class_syntax', title: 'Class Syntax' }
     { templateName: 'destructured_assignment', title: 'Destructured Assignment' }
-    { templateName: 'acknowledgements', title: 'Acknowledgements' }
+    { templateName: 'and_finally', title: 'And Finally' }
   ]
