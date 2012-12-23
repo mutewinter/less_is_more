@@ -1362,7 +1362,7 @@ helpers = helpers || Ember.Handlebars.helpers;
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n'Simple'\nwow =\n  so: 'you'\n  can: 'just'\n  type: 'stuff'\n\n\n'Nest as deep as you like'\nevenBetter =\n  works: 'with'\n  reserved: 'words'\n  class: 'boom'\n  nesting:\n    is: 'also'\n    cool: 'bro'\n    event: 'with'\n    arrays: [\n      'holy'\n      'moley'\n    ]\n\n'Easy object arrays'\narray1 = [\n  {first: 'object', withAKey: 'key'}\n  {second: 'object', withAKey: 'key'}\n  {third: 'object', withAKey: 'key'}\n]\n\n'or'\n\narray2 = [\n  first: 'object', withAKey: 'key'\n,\n  second: 'object', withAKey: 'key'\n,\n  third: 'object', withAKey: 'key'\n]\n\nlog _.isEqual array1, array2\n");}
+  data.buffer.push("\n'Simple'\nwow =\n  so: 'you'\n  can: 'just'\n  type: 'stuff'\n\n\n'Nest as deep as you like'\nevenBetter =\n  works: 'with'\n  reserved: 'words'\n  class: 'boom'\n  nesting:\n    is: 'also'\n    cool: 'bro'\n    even: 'with'\n    arrays: [\n      'holy'\n      'moley'\n    ]\n\n'Easy object arrays'\narray1 = [\n  {first: 'object', withAKey: 'key'}\n  {second: 'object', withAKey: 'key'}\n  {third: 'object', withAKey: 'key'}\n]\n\n'or'\n\narray2 = [\n  first: 'object', withAKey: 'key'\n,\n  second: 'object', withAKey: 'key'\n,\n  third: 'object', withAKey: 'key'\n]\n\nlog _.isEqual array1, array2\n");}
 
   data.buffer.push("<h2 class=\"text-center\">\n  Much easier to read and update\n</h2>\n");
   foundHelper = helpers.code;
