@@ -4,7 +4,7 @@ Less code means less debugging, testing, and maintainence. CoffeeScript's
 terse syntax allows for maximum productivity whilst encouraging good
 JavaScript coding practices.
 
-**[View the Presentation](http://mutewinter.github.com/why_ember)**
+**[View the Presentation](http://mutewinter.github.com/less_is_more)**
 
 ## Running Locally
 
